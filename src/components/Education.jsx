@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
+import SectionReveal from './SectionReveal';
 
 const Education = () => {
     const education = [
@@ -30,12 +31,7 @@ const Education = () => {
     return (
         <section id="education" className="py-5 position-relative" style={{ background: 'linear-gradient(to bottom, var(--bg-dark), var(--bg-gradient-1))' }}>
             <Container fluid className="px-5">
-                <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: false, amount: 0.1 }}
-                >
+                <SectionReveal>
                     <h2 className="display-4 fw-bold text-center mb-5" style={{ color: 'var(--accent-cyan)' }}>Education</h2>
                     
                     <div className="position-relative mx-auto" style={{ maxWidth: '1200px' }}>
@@ -103,7 +99,7 @@ const Education = () => {
                             );
                         })}
                     </div>
-                </motion.div>
+                </SectionReveal>
             </Container>
         </section>
     );

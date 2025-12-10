@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
+import SectionReveal from './SectionReveal';
 
 const Hero = () => {
     return (
@@ -13,12 +14,7 @@ const Hero = () => {
             <Container fluid className="px-5 position-relative" style={{ zIndex: 1, marginTop: '80px' }}>
                 <Row className="justify-content-center align-items-center text-center">
                     <Col lg={10} className="mb-5 mb-md-0">
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8 }}
-                            viewport={{ once: false }}
-                        >
+                        <SectionReveal>
                             <h2 className="h4 text-capitalize mb-3" style={{ color: 'var(--accent-cyan)', letterSpacing: '2px' }}>
                                 Hello, It's Me
                             </h2>
@@ -48,7 +44,7 @@ const Hero = () => {
                                 {/* Placeholder for Resume Download */}
                                 <Button variant="outline-info" href="#">Download Resume</Button>
                             </div>
-                        </motion.div>
+                        </SectionReveal>
                     </Col>
                 </Row>
             </Container>

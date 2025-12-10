@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
+import SectionReveal from './SectionReveal';
 
 const Skills = () => {
     const technicalSkills = [
@@ -36,12 +37,7 @@ const Skills = () => {
                 zIndex: -1
             }}></div>
             <Container fluid className="px-5">
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: false, amount: 0.1 }}
-                >
+                <SectionReveal>
                     <h2 className="display-4 fw-bold text-center mb-5" style={{ color: 'var(--accent-cyan)' }}>Skills</h2>
                     
                     <Row className="justify-content-center gy-5">
@@ -63,7 +59,7 @@ const Skills = () => {
                             </div>
                         </Col>
                     </Row>
-                </motion.div>
+                </SectionReveal>
             </Container>
         </section>
     );

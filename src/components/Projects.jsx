@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Badge } from 'react-bootstrap';
 import { motion } from 'framer-motion';
+import SectionReveal from './SectionReveal';
 
 const Projects = () => {
     const projects = [
@@ -27,12 +28,7 @@ const Projects = () => {
     return (
         <section id="projects" className="py-5 bg-dark" style={{ background: 'var(--bg-gradient-1)' }}>
             <Container fluid className="px-5">
-                <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: false, amount: 0.1 }}
-                >
+                <SectionReveal>
                     <h2 className="display-4 fw-bold text-center mb-5" style={{ color: 'var(--accent-purple)' }}>Projects</h2>
                     
                     <Row className="g-4">
@@ -77,7 +73,7 @@ const Projects = () => {
                             </Col>
                         ))}
                     </Row>
-                </motion.div>
+                </SectionReveal>
             </Container>
         </section>
     );

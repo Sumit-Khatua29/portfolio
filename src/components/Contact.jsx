@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
+import SectionReveal from './SectionReveal';
 
 const Contact = () => {
     return (
@@ -22,12 +23,7 @@ const Contact = () => {
             }}></div>
 
             <Container fluid className="px-5 position-relative" style={{ zIndex: 1 }}>
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: false, amount: 0.1 }}
-                >
+                <SectionReveal>
                     <Row className="justify-content-center text-center mb-5">
                         <Col md={8}>
                             <h2 className="display-4 fw-bold mb-4" style={{ color: 'var(--accent-cyan)' }}>Get In Touch</h2>
@@ -77,7 +73,7 @@ const Contact = () => {
                             Designed & Built by <span style={{ color: 'var(--accent-purple)' }}>Sumit Khatua</span>
                         </p>
                     </div>
-                </motion.div>
+                </SectionReveal>
             </Container>
         </footer>
     );

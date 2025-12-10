@@ -1,17 +1,13 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import { motion } from 'framer-motion';
+import SectionReveal from './SectionReveal';
 
 const About = () => {
     return (
         <section id="about" className="py-5" style={{ background: 'var(--bg-dark)' }}>
             <Container fluid className="px-5">
-                <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: false, amount: 0.1 }}
-                >
+                <SectionReveal>
                     <h2 className="display-4 fw-bold text-center mb-5" style={{ color: 'var(--accent-purple)' }}>About Me</h2>
                     
                     <Row className="mb-5 align-items-center justify-content-center">
@@ -56,7 +52,7 @@ const About = () => {
                             </p>
                         </Col>
                     </Row>
-                </motion.div>
+                </SectionReveal>
             </Container>
         </section>
     );
